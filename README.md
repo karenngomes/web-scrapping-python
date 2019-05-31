@@ -1,6 +1,8 @@
-## Install depedencies
+# Web Scrapping with Python
 
-You must install pip before
+## Installing depedencies
+
+* You must install python 3.6 and pip3 before
 
 ```
 pip3 install requests
