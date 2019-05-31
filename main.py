@@ -6,5 +6,7 @@ res.encoding = "utf-8"
 
 soup = BeautifulSoup(res.text, 'html.parser')
 
-all_posts = soup.find_all(class_='post')
-print(all_posts)
+posts = soup.find_all(class_='post')
+
+for post in posts:
+    print(post.find('h2').text)
