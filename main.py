@@ -20,3 +20,5 @@ for post in posts:
     all_posts.append({'title': title, 'preview': preview,
                       'author': author, 'time': time, 'img': img})
 
+with open('posts.json', 'w') as json_file:
+    json.dump(all_posts, json_file, indent=3, ensure_ascii=False)
