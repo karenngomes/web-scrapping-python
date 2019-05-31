@@ -1,6 +1,6 @@
 import requests
 
-res = requests.get('http://digitalinnovation.one/blog/')
+res = requests.get('https://digitalinnovation.one/blog/')
 res.encoding = "utf-8"
 
-print(res)
+print(res.text)
