@@ -12,4 +12,6 @@ all_posts = []
 for post in posts:
     info = post.find(class_='post-content')
     title = info.h2.text
-    print(title)
+    preview = info.p.text
+    author = post.find(class_='post-author').text[5:]
+    print(title, preview, author)
