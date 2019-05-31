@@ -7,7 +7,18 @@ res.encoding = "utf-8"
 
 soup = BeautifulSoup(res.text, 'html.parser')
 
+links = soup.find(class_='pagination').find_all('a')
+
+all_pages = []
+for link in links:
+    page = requests.get(link.get('href'))
+    page.encoding = 'utf-8'
+    all_pages.append(BeautifulSoup(page.text, 'html.parser'))
+
+print(len(all_pages))
+
 posts = soup.find_all(class_='post')
+
 all_posts = []
 
 for post in posts:
